@@ -2,7 +2,7 @@
 
 ## If you have any questions, concerns, or need anything at all please do not hesitate to contact tjpucket@ncsu.edu or mspinega@ncsu.edu
 
-> You have 3 days to work on this project.  
+> Please schedule a meeting for next week using the link from the original interview email and have your solultion prepared 24 hours before the meeting so we can review your solution ahead of time.
 > This is not pass / fail Your program will be assessed for how you go about solving the problem.  
 > Not completing the challenge is not an automatic disqualification.  
 > This should be written in an Object Oriented mentality.  
@@ -10,6 +10,7 @@
 > This program should ensure only valid data can be given when prompting user for input.
 
 ## Overview
+
 You are creating a program that emulates the real estate purchasing process.  
 The user will input an annual income, and your program will return a maximum loan pre-approval quote.  
 Once the user has a pre-approval quote the user should be prompted for their minimum requirements for their house: square footage, bed rooms, bathrooms  
@@ -20,11 +21,12 @@ and overview of their loan and payment schedule.
 ## Git Usage
 
 To ensure a clear history of your development process, please follow these guidelines for using Git:
-1. **Main Branch**: Maintain a `main` branch that will serve as the primary branch for the project. This branch should contain your project's most stable and final version of the code.
-2. **Feature Branches**: For each new feature or significant change, create a new branch from `main`. Name these branches with a prefix of `feature/` followed by a short descriptor of the feature (e.g., `feature/add-loan-calculation`).
-3. **Bug Fix Branches**: If you need to fix a bug, create a branch with a prefix of `bugfix/` followed by a short descriptor of the bug fix (e.g., `bugfix/fix-input-validation`).
-4. **Commit Messages**: Write clear and descriptive commit messages. This helps in understanding the purpose of each change and makes the project history more readable.
-5. **Pull Requests**: Once a feature or bug fix is complete, create a pull request (PR) to merge your branch back into `main`. Provide a brief description of the changes and any other relevant information for the review.
+1. **Fork this repository**: Create a fork of this repo and grant read access to @mikahpinegar and @trevorjpuckett so we can review your commit history
+2. **Main Branch**: Maintain a `main` branch that will serve as the primary branch for the project. This branch should contain your project's most stable and final version of the code.
+3. **Feature Branches**: For each new feature or significant change, create a new branch from `main`. Name these branches with a prefix of `feature/` followed by a short descriptor of the feature (e.g., `feature/add-loan-calculation`).
+4. **Bug Fix Branches**: If you need to fix a bug, create a branch with a prefix of `bugfix/` followed by a short descriptor of the bug fix (e.g., `bugfix/fix-input-validation`).
+5. **Commit Messages**: Write clear and descriptive commit messages. This helps in understanding the purpose of each change and makes the project history more readable.
+6. **Pull Requests**: Once a feature or bug fix is complete, create a pull request (PR) to merge your branch back into `main`. Provide a brief description of the changes and any other relevant information for the review. Once a PR is ready, merge it into the main branch. There is no need for code review in this project.
 
 Following these guidelines will help us understand your approach to solving the challenge and assess your skills in version control management.
 
