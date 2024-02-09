@@ -11,10 +11,9 @@
 
 You are creating a program that emulates the real estate purchasing process.  
 The user will input an annual income, and your program will return a maximum loan pre-approval quote.  
-Once the user has a pre-approval quote the user should be prompted for their minimum requirements for their house: square footage, bed rooms, bathrooms  
-once the requirements are gathered and approved, the user should be presented with a random number of listings  
-that fit their loan range and purchasing parameters. After the user chooses a home to purchase they will be given  
-and overview of their loan and payment schedule.
+Once the user has a pre-approval quote the user should be prompted for their minimum requirements for their house: square footage, bed rooms, bathrooms.
+Once the requirements are gathered and approved, the user should be presented with a random number of listings.
+That fit their loan range and purchasing parameters. After the user chooses a home to purchase they will be given and overview of their loan and payment schedule.
 
 ## Git Usage
 
@@ -59,23 +58,22 @@ you should not grant the user a loan if the calculated maximum loan is less than
 
 ### Gather buyers requirements
 Once the user has recieved a loan pre-approval quote (maximum loan amount), the user should be prompted for the following:  
-* How much square footage are they looking for
-* How many bedrooms
-* How many bathrooms
+* How much square footage are they looking for?
+* How many bedrooms?
+* How many bathrooms?
 
 ### Generate House Listings
-Once the user has entered in that information,  
-the user should be given back a list of houses that match their descriptions within their loan amount.
+Once the user has entered in that information, the user should be given back a list of houses that match their descriptions within their loan amount.
 The list should show each houses purchase price, square footage, price per square feet, bedroom & bathroom count.
 
 #### Listings Restrictions
 > There are restrictions to what should return results  
 
-* A house cannot have less that 250 square feet  
-* A house cannot have a price less than $50,000
-* The square footage of a house cannot be more than 1.25% of the houses price
-* A house cannot have more than 1 bedroom per 400 square feet
-* A house cannot have more than 1 bathroom per room
+* A house cannot have less that 250 square feet.
+* A house cannot have a price less than $50,000.
+* The square footage of a house cannot be more than 1.25% of the houses price.
+* A house cannot have more than 1 bedroom per 400 square feet.
+* A house cannot have more than 1 bathroom per room.
 
 #### Listings Specifications
 
@@ -87,29 +85,29 @@ unless the users requirements cause any of the restrictions to be true.
 When generating a list of houses the purchase price generated should be marked up or discounted  
 depending on the number of houses in the list up to a maximum of 10%.  
 For example:  
-* a list of 2 houses means that the price of each house should be marked up by 10%
-* a list of 7 houses means that the price of each house should be marked up by 0%
-* a list of 12 houses means that the price of each house should be discounted by 10%
+* a list of 2 houses means that the price of each house should be marked up by 10%.
+* a list of 7 houses means that the price of each house should be marked up by 0%.
+* a list of 12 houses means that the price of each house should be discounted by 10%.
 
 
 ### Purchase a property
-> Keep in mind that the purchase price will most likely not be the maximum loan amount
+> Keep in mind that the purchase price will most likely not be the maximum loan amount.
 > but the mortgage should still take exactly 30 years to be paid off.
 
-The user should be able to select a house from the list to purchase  
-or generate a new list. 
+The user should be able to select a house from the list to purchase or generate a new list. 
 
 ### Generate Bill Breakdown
-Once a user selects a property, they should be given a break down of  
-their monthly bill & amounts paid over the lifetime of the mortgage.
+Once a user selects a property, they should be given a break down of their monthly bill & amounts paid over the lifetime of the mortgage.  
 This should display the following information:  
+
 #### Loan lifetime information 
-* Total amount paid over the lifetime of the mortgage
-* amount paid on the balance over the lifetime of the mortgage
-* amount of interest paid over the lifetime of the mortgage
-* amount of taxes & insurance paid over the lifetime of the mortgage  
+* Total amount paid over the lifetime of the mortgage.
+* Amount paid on the balance over the lifetime of the mortgage.
+* Amount of interest paid over the lifetime of the mortgage.
+* Amount of taxes & insurance paid over the lifetime of the mortgage.
+
 #### Loan monthly information
 * Total monthly payment.
-* amount being applied to balance each month
-* amount of interest paid each month
-* amount of taxes & insurance paid each month
+* Amount being applied to balance each month.
+* Amount of interest paid each month.
+* Amount of taxes & insurance paid each month.
