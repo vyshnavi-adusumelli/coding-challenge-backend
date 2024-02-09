@@ -10,10 +10,15 @@
 ## Overview
 
 You are creating a program that emulates the real estate purchasing process.    
+  
 The user will input an annual income, and your program will return a maximum loan pre-approval quote.    
+  
 Once the user has a pre-approval quote the user should be prompted for their minimum requirements for their house: square footage, bed rooms, bathrooms.    
+  
 Once the requirements are gathered and approved, the user should be presented with a random number of listings.    
+  
 That fit their loan range and purchasing parameters. After the user chooses a home to purchase they will be given and overview of their loan and payment schedule.    
+  
 
 ## Git Usage
 
