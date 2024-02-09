@@ -1,8 +1,8 @@
 # Prompt  
+**Please schedule a meeting for next week using the link from the original interview email and have your solultion prepared 24 hours before the meeting so we can review your solution ahead of time.** 
 
 ## If you have any questions, concerns, or need anything at all please do not hesitate to contact tjpucket@ncsu.edu or mspinega@ncsu.edu
 
-> Please schedule a meeting for next week using the link from the original interview email and have your solultion prepared 24 hours before the meeting so we can review your solution ahead of time.
 > This is not pass / fail Your program will be assessed for how you go about solving the problem.  
 > Not completing the challenge is not an automatic disqualification.  
 > This should be written in an Object Oriented mentality.  
