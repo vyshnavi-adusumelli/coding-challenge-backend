@@ -1,4 +1,4 @@
-const Property = require('../models/Property');
+const Property = require('../model/Property');
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 class ListingGenerator {
@@ -19,6 +19,14 @@ class ListingGenerator {
     });
   }
 
+  static isUnique(price, squareFeet, bedrooms, bathrooms, listings) {
+    return !listings.some(existingListing =>
+      !(existingListing.price !== price || existingListing.squareFeet !== squareFeet ||
+        existingListing.bedrooms !== bedrooms ||
+        existingListing.bathrooms !== bathrooms)
+      );
+    }
+
   static generateListings(maxLoanAmount, buyerRequirements) {
     let listings = [];
     let index = 0;
@@ -31,6 +39,7 @@ class ListingGenerator {
       const bathrooms = randomInt(1, bedrooms);
 
       if (this.meetsRestrictions(price, squareFeet, bedrooms, bathrooms) &&
+          this.isUnique(price, squareFeet, bedrooms, bathrooms, listings) &&
           squareFeet >= buyerRequirements.squareFeet &&
           bedrooms >= buyerRequirements.bedrooms &&
           bathrooms >= buyerRequirements.bathrooms) {

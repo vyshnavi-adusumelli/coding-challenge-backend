@@ -1,10 +1,10 @@
 {
   "name": "coding-challenge-backend",
   "version": "1.0.0",
-  "description": "Creating a reat estate purchasing app",
-  "main": "index.js",
+  "description": "Creating a real estate purchasing app",
+  "main": "src/App.js",
   "scripts": {
-    "start": "node App.js",
+    "start": "node src/App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
