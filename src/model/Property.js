@@ -1,6 +1,5 @@
 class Property {
-  constructor(index, price, squareFeet, pricePerSquareFeet, bedrooms, bathrooms) {
-    this.index = index;
+  constructor(price, squareFeet, pricePerSquareFeet, bedrooms, bathrooms) {
     this.price = price;
     this.squareFeet = squareFeet;
     this.pricePerSquareFeet = pricePerSquareFeet;
