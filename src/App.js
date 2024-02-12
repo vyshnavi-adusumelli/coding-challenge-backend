@@ -1,6 +1,6 @@
 const readlineSync = require('readline-sync');
-const User = require('./models/User');
-const Loan = require('./models/Loan');
+const User = require('./model/User');
+const Loan = require('./model/Loan');
 const ListingGenerator = require('./util/ListingGenerator');
 
 class App {

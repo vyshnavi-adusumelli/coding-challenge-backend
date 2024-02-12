@@ -1,4 +1,4 @@
-const Property = require('../models/Property');
+const Property = require('../model/Property');
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 class ListingGenerator {
