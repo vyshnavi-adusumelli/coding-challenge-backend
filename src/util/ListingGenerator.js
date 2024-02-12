@@ -29,7 +29,6 @@ class ListingGenerator {
 
   static generateListings(maxLoanAmount, buyerRequirements) {
     let listings = [];
-    let index = 0;
     const targetListingsCount = randomInt(2, 12);
 
     while (listings.length < targetListingsCount) {
@@ -43,7 +42,7 @@ class ListingGenerator {
           squareFeet >= buyerRequirements.squareFeet &&
           bedrooms >= buyerRequirements.bedrooms &&
           bathrooms >= buyerRequirements.bathrooms) {
-        listings.push(new Property(++index, price, squareFeet, price / squareFeet, bedrooms, bathrooms));
+        listings.push(new Property(price, squareFeet, price / squareFeet, bedrooms, bathrooms));
       }
     }
 
