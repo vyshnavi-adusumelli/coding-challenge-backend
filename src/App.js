@@ -29,8 +29,8 @@ class App {
 
     console.log("\nGenerating listings based on your requirements...");
     const listings = ListingGenerator.generateListings(maxLoan, user.requirements);
-    listings.forEach((listing) => {
-        console.log(`${listings.indexOf(listing) + 1}: Price $${listing.price.toFixed(2)}, Size: ${listing.squareFeet} sqft, $${listing.pricePerSquareFeet.toFixed(2)} price/sqft, ${listing.bedrooms} bed, ${listing.bathrooms} bath`);
+    listings.forEach((listing, index) => {
+        console.log(`${index + 1}: Price $${listing.price.toFixed(2)}, Size: ${listing.squareFeet} sqft, $${listing.pricePerSquareFeet.toFixed(2)} price/sqft, ${listing.bedrooms} bed, ${listing.bathrooms} bath`);
     });
 
     const choice = readlineSync.question('\nEnter the number of the property you wish to purchase, or 0 to exit: ');
