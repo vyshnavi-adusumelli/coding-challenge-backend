@@ -38,7 +38,7 @@ class App {
     if (index === 0)
         process.exit();
     else {
-        BillGenerator.generateLoanBillBreakdown(listings[index].price);
+        BillGenerator.generateLoanBillBreakdown(listings[index - 1].price);
     }
   }
 }
