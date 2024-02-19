@@ -5,12 +5,31 @@
   "main": "src/App.js",
   "scripts": {
     "start": "node src/App.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "node_modules/",
+      "test/"
+    ],
+    "all": true
   }
 }
