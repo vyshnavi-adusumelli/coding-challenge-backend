@@ -27,16 +27,22 @@ class App {
     user.setRequirements(squareFeet, bedrooms, bathrooms);
 
     console.log("\nGenerating listings based on your requirements...");
-    const listings = ListingGenerator.generateListings(user.maxLoan, user.requirements);
-    listings.forEach((listing, index) => {
-        console.log(`${index + 1}: Price $${listing.price.toFixed(2)}, Size: ${listing.squareFeet} sqft, $${listing.pricePerSquareFeet.toFixed(2)} price/sqft, ${listing.bedrooms} bed, ${listing.bathrooms} bath`);
-    });
 
-    const choice = InputChecker.getNumericInput('\nEnter the number of the property you wish to purchase, or 0 to exit: ');
-    const index = parseInt(choice);
-    if (index === 0)
-        process.exit();
-    BillGenerator.generateLoanBillBreakdown(listings[index - 1].price);
+    const listings = ListingGenerator.generateListings(maxLoan, user.requirements);
+
+    while (true) {
+        listings.forEach((listing, index) => {
+            console.log(`${index + 1}: Price $${listing.price.toFixed(2)}, Size: ${listing.squareFeet} sqft, $${listing.pricePerSquareFeet.toFixed(2)} price/sqft, ${listing.bedrooms} bed, ${listing.bathrooms} bath`);
+        });
+
+        const choice = readlineSync.question('\nEnter the number of the property you wish to purchase, or 0 to exit: ');
+        const index = parseInt(choice);
+        if (index === 0)
+            process.exit();
+        else {
+            BillGenerator.generateLoanBillBreakdown(listings[index - 1].price);
+        }
+    }
   }
 }
 
