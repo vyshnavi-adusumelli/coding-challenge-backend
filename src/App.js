@@ -1,33 +1,33 @@
 const readlineSync = require('readline-sync');
 const User = require('./model/User');
-const Loan = require('./model/Loan');
 const ListingGenerator = require('./util/ListingGenerator');
 const BillGenerator = require('./util/BillGenerator');
+const LoanConstants = require('./util/LoanConstants');
+const InputChecker = require('./util/InputChecker');
 
 class App {
   start() {
     console.log('\nWelcome to the Real Estate Application!');
-    const annualIncome = parseFloat(readlineSync.question('\nPlease enter your annual income: '));
+    const annualIncome = InputChecker.getNumericInput('\nPlease enter your annual income: ');
 
-    const user = new User(annualIncome);
+    const user = new User().setAnnualIncome(annualIncome);
 
-    const loan = new Loan(user);
-    const maxLoan = loan.calculateMaxLoan();
-    if (maxLoan < 50000) {
+    const maxLoan = BillGenerator.calculateMaxLoan(user.annualIncome);
+    user.setMaxLoan(maxLoan);
+    if (maxLoan < LoanConstants.MIN_LOAN) {
         console.log(`Based on your income, loan cannot be granted to you right now`);
         process.exit();
     }
-    else {
-        console.log(`Based on your income, the maximum loan amount you can afford is: $${maxLoan.toFixed(2)}`);
-    }
+    console.log(`Based on your income, the maximum loan amount you can afford is: $${user.maxLoan.toFixed(2)}`);
 
     console.log("\nPlease enter the following details of your choice")
-    const squareFeet = readlineSync.question('Minimum square footage: ');
-    const bedrooms = readlineSync.question('Minimum number of bedrooms: ');
-    const bathrooms = readlineSync.question('Minimum number of bathrooms: ');
+    const squareFeet = InputChecker.getNumericInput('Minimum square footage: ');
+    const bedrooms = InputChecker.getNumericInput('Minimum number of bedrooms: ');
+    const bathrooms = InputChecker.getNumericInput('Minimum number of bathrooms: ');
     user.setRequirements(squareFeet, bedrooms, bathrooms);
 
     console.log("\nGenerating listings based on your requirements...");
+
     const listings = ListingGenerator.generateListings(maxLoan, user.requirements);
 
     while (true) {
